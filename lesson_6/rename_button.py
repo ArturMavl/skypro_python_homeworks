@@ -10,10 +10,10 @@ driver = webdriver.Chrome(service = servChrom)
 driver.get("http://uitestingplayground.com/textinput")
 
 # Поиск поля ввода
-input = driver.find_element(By.CSS_SELECTOR, "newButtonName")
+input = driver.find_element(By.ID, "newButtonName")
 
 # Поиск кнопки
-button = driver.find_element(By.CSS_SELECTOR, "updatingButton")
+button = driver.find_element(By.ID, "updatingButton")
 
 # Ввод текста в поле ввода
 input.send_keys("SkyPro")
