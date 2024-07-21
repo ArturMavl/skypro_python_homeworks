@@ -17,7 +17,7 @@ driver.get(
 waiter = WebDriverWait(driver, 40)
 
 # Условие до появления 4 картинки
-waiter.untill(
+waiter.until(
     EC.presence_of_element_located((By.ID, "landscape"))
 )
 

@@ -13,7 +13,7 @@ driver.get("http://uitestingplayground.com/textinput")
 input = driver.find_element(By.CSS_SELECTOR, "newButtonName")
 
 # Поиск кнопки
-button = driver.find_element(By.Css_SELECTOR, "updatingButton")
+button = driver.find_element(By.CSS_SELECTOR, "updatingButton")
 
 # Ввод текста в поле ввода
 input.send_keys("SkyPro")
