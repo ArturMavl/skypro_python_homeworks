@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from configuration import *
 from time import sleep
 
-# 1 вариант
 def test_data_types_form(chrome_browser):
     chrome_browser.get(URL_1)
     # Ввод данных в соответствующие поля

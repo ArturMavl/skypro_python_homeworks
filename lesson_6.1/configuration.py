@@ -10,9 +10,7 @@ city = "Москва"
 country = "Россия"
 job_position = "QA"
 company = "SkyPro"
-
 # Второе задание
 URL_2 = "https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html"
-
 # Третье задание
 URL_3 = "https://www.saucedemo.com/"

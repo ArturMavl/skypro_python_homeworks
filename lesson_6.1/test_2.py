@@ -18,11 +18,9 @@ def test_calculator_form(chrome_browser):
     chrome_browser.find_element(By.XPATH, "//span[text() = '8']").click()
     # =
     chrome_browser.find_element(By.XPATH, "//span[text() = '=']").click()
-
     # wait for the calculation to complete
     WebDriverWait(chrome_browser, 46).until(EC.text_to_be_present_in_element((By.CLASS_NAME, "screen"), "15"))
     # getting text meaning from result
     result_text = chrome_browser.find_element(By.CLASS_NAME, "screen").text
-
     # assert that the result is 15
     assert result_text == "15"
