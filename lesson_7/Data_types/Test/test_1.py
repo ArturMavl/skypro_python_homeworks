@@ -1,12 +1,11 @@
 from lesson_7.Data_types.Pages.Mainpage import MainPage
 from lesson_7.Data_types.Pages.Datafildes import DataFild
 
-
 def test_assertion(chrome_browser):
     main_page = MainPage(chrome_browser)
-    main_page.find_fields()
-    main_page.filling_in_the_fields()
-    main_page.click_submit_button()
+    main_page.find_fields() # Находим поля ждя заполнения
+    main_page.filling_in_the_fields() # Заполняем поля
+    main_page.click_submit_button() # Подтверждаем заполнение полей
 
     data_fild = DataFild(chrome_browser)
     data_fild.find_fields()
@@ -20,7 +19,7 @@ def test_assertion(chrome_browser):
     data_fild.get_class_company()
     data_fild.get_class_zipcode()
 
-
+    # Удостоверяемся, что в классах есть ожидаемый результат
     assert "success" in data_fild.get_class_first_name()
     assert "success" in data_fild.get_class_last_name()
     assert "success" in data_fild.get_class_address()

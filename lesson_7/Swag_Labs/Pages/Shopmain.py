@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from lesson_7.constants import Shop_URL
 
-
 class ShopmainPage:
     def __init__(self, browser):
         self.browser = browser
@@ -25,7 +24,7 @@ class ShopmainPage:
     # Добавляем товары в корзину
     def click_issue(self):
         self.browser.find_element(*self.Sauce_Labs_Backpack).click()
-        self.browser.find_element(*self.Sauce_Labs_Bolt_TShirt).click()
+        self.browser.find_element(*self.Sauce_Bolt_TShirt).click()
         self.browser.find_element(*self.Sauce_Labs_Onesie).click()
     
     # Переходим в корзину и оформляем заказ

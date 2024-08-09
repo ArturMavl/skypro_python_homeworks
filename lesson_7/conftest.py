@@ -1,5 +1,5 @@
 import pytest
-from selenium import webdriver
+from selenium import webdriver # импорт драйвера для взаимодействия с браузером
 
 @pytest.fixture()
 def chrome_browser():

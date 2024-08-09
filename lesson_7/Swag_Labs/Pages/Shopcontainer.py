@@ -2,12 +2,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-
 class ShopContainer:
     def __init__(self, browser):
         self.browser = browser
     
-    # Кликаем на кнопку checkout
+    # Кликаем на кнопку "checkout"
     def checkout(self):
         self.check = (By.ID, "checkout")
         self.browser.find_element(*self.check).click()

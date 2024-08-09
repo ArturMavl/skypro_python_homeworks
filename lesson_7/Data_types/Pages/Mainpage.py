@@ -1,13 +1,13 @@
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
-from lesson_7.constants import Test_form_URL
+from lesson_7.constants import Filling_form_URL
 from lesson_7.Data_types.data import *
 
 class MainPage:
     def __init__(self, browser):
         self.browser = browser
-        self.browser.get(Test_form_URL)
+        self.browser.get(Filling_form_URL)
 
     # Находим необходимые поля для заполнения на главной странице
     def find_fields(self):
@@ -36,6 +36,6 @@ class MainPage:
         self.browser.find_element(*self._job_position).send_keys(job_position)
         self.browser.find_element(*self._company).send_keys(company)
     
-
+    # Кликаем на кнопку подтверждения
     def click_submit_button(self):
         WebDriverWait(self.browser, 40, 0.1).until(EC.element_to_be_clickable(self._button)).click()
